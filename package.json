@@ -17,9 +17,12 @@
     "stylelint": "9.x.x"
   },
   "scripts": {
-    "stylelint": "stylelint \"src/scss/**/*.scss\" --syntax scss",
+    "stylelint": "stylelint \"src/scss/**/*.scss\" --syntax scss --fix",
     "test": "npm run stylelint",
     "build": "gulp build",
     "start": "gulp start"
+  },
+  "dependencies": {
+    "stylelint-config-sass-guidelines": "^5.x.x"
   }
 }
