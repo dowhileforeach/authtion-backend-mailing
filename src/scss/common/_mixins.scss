@@ -1,0 +1,43 @@
+@mixin reset-margin-padding() {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin reset-list() {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin fonts($size, $height, $weight, $style, $color) {
+  font-size: $size;
+  line-height: $height;
+  font-weight: $weight;
+  font-style: $style;
+  color: $color;
+}
+
+@mixin reset-font() {
+  @include fonts(0, 0, 400, normal, transparent);
+}
+
+//
+// ADAPTIVE
+//
+@mixin media-mobile() {
+  @media (min-width: $grid-breakpoint-mobile) {
+    @content;
+  }
+}
+
+@mixin media-tablet() {
+  @media (min-width: $grid-breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin media-desktop() {
+  @media (min-width: $grid-breakpoint-desktop) {
+    @content;
+  }
+}

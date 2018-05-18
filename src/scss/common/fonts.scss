@@ -1,0 +1,4 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, sans-serif;
+  @include fonts($font-size-x1, $font-height-normal, $font-weight-normal, normal, $color-mine-shaft);
+}

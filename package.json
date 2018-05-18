@@ -1,0 +1,25 @@
+{
+  "name": "authtion-backend-mailing",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Mailing for Authtion project backend",
+  "devDependencies": {
+    "autoprefixer": "^8.x.x",
+    "browser-sync": "^2.x.x",
+    "del": "^3.x.x",
+    "gulp": "^3.x.x",
+    "gulp-clean-css": "^3.x.x",
+    "gulp-postcss": "^7.x.x",
+    "gulp-rename": "^1.x.x",
+    "gulp-sass": "^4.x.x",
+    "gulp-uglify": "^3.x.x",
+    "run-sequence": "^2.x.x",
+    "stylelint": "9.x.x"
+  },
+  "scripts": {
+    "stylelint": "stylelint \"src/scss/**/*.scss\" --syntax scss",
+    "test": "npm run stylelint",
+    "build": "gulp build",
+    "start": "gulp start"
+  }
+}

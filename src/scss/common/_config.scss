@@ -1,0 +1,60 @@
+$border-radius: 2px;
+$indent-vertical: 5px;
+$indent-horizontal: 7px;
+
+//
+// FONTS
+//
+$font-size-x1: 13px;
+$font-size-x2: $font-size-x1 + 2;
+$font-size-x3: $font-size-x2 + 2;
+$font-height-normal: 1.2;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+//
+// COLORS,
+// http://chir.ag/projects/name-that-color
+//
+$color-bg-body: #eef0f3;
+$color-bg-page-header: #fafafb;
+
+$color-warning: #721c24;
+$color-border-warning: #f5c6cb;
+$color-bg-warning: #f8d7da;
+$color-danger: #ff0000;
+$color-black: #000000;
+$color-mine-shaft: #202020;
+$color-gray: #939393;
+$color-tower-gray: #b0bec5;
+$color-alto: #dcdcdc;
+$color-athens-gray: #e3e4e8;
+$color-gallery: #efefef;
+$color-white: #ffffff;
+$color-brink-pink: #fc6781;
+$color-turbo: #f3f100;
+$color-shalimar: #faffbd;
+$color-coconut-cream: #f8f7dc;
+$color-chilean-heath: #fffde6;
+$color-pastel-green: #56dc6e;
+$color-navy-blue: #00008b;
+$color-dark-blue: #0000c8;
+$color-blue: #0000ff;
+$color-denim-approx: #1965b5;
+$color-danube: #689bd5;
+
+//
+// ADAPTIVE
+//
+$grid-breakpoint-mobile: 320px;
+$grid-breakpoint-tablet: 768px;
+$grid-breakpoint-desktop: 1150px;
+
+$indent-mobile: 30px;
+$indent-tablet: 50px;
+
+$content-width-mobile: 260px;
+$content-width-tablet: 668px;
+$content-width-desktop: 1050px;
