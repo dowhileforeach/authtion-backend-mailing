@@ -1,4 +1,4 @@
-// npm i --save-dev gulp gulp-sass gulp-postcss autoprefixer gulp-clean-css gulp-uglify gulp-inject-css gulp-htmlmin gulp-rename run-sequence del browser-sync
+// npm i --save-dev gulp gulp-sass gulp-postcss autoprefixer gulp-clean-css gulp-uglify gulp-inject-css gulp-inline-css gulp-htmlmin gulp-rename run-sequence del browser-sync
 
 const gulp = require("gulp");
 const del = require("del");                              // удалить директорию, файл
@@ -8,6 +8,7 @@ const sass = require("gulp-sass");                       // трансляция
 const mincss = require("gulp-clean-css");                // минификация CSS
 const minjs = require("gulp-uglify");                    // минификация JS
 const injectcss = require('gulp-inject-css');            // внедрение CSS внутрь html файла
+const inlinecss = require('gulp-inline-css');
 const minhtml = require('gulp-htmlmin');                 // минификация HTML
 const rename = require("gulp-rename");                   // переименовать директорию, файл
 const runsequence = require("run-sequence");             // некоторые задачи надо выполнять последовательно
@@ -45,7 +46,13 @@ gulp.task("fonts", () => {
 
 gulp.task("html", () => {
   return gulp.src(paths.src.html)
-    .pipe(injectcss())
+    // .pipe(injectcss())
+    .pipe(inlinecss({
+      applyStyleTags: true,
+      applyLinkTags: true,
+      removeStyleTags: true,
+      removeLinkTags: true
+    }))
     .pipe(minhtml({collapseWhitespace: true}))
     .pipe(gulp.dest(paths.output.html));
 });
@@ -76,7 +83,7 @@ gulp.task("css", () => {
       level: {1: {specialComments: false}}
     }))
     .pipe(gulp.dest(paths.src.css))               // CSS готов для внедрения
-    // .pipe(gulp.dest(paths.output.css))
+    .pipe(gulp.dest(paths.output.css))
     .pipe(browsersync.stream());
 });
 

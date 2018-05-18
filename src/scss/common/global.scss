@@ -19,7 +19,7 @@ a {
 
   border-bottom: 1px $color-denim-approx dotted;
 
-  transition: opacity, border-bottom-style 0.35s;
+  transition: opacity 0.15s ease;
 
   &:hover,
   &:focus {

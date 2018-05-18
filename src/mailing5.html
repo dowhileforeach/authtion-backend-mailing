@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Restore password</title>
-  <!-- inject-css css/bundle.min.css -->
+  <link rel="stylesheet" href="css/bundle.min.css">
 </head>
 <body>
 
@@ -22,7 +22,7 @@
         To restore your password please click here:
       </p>
       <p>
-        <a href="#" target="_blank">Insert link here</a>
+        <a href="#" target="_blank" data-th-href="@{${data}}" data-th-utext="${data}">Insert link here</a>
       </p>
     </div>
   </section>
