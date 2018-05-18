@@ -1,4 +1,4 @@
-// npm i --save-dev gulp gulp-sass gulp-postcss autoprefixer gulp-clean-css gulp-uglify gulp-rename run-sequence del browser-sync
+// npm i --save-dev gulp gulp-sass gulp-postcss autoprefixer gulp-clean-css gulp-uglify gulp-inject-css gulp-rename run-sequence del browser-sync
 
 const gulp = require("gulp");
 const del = require("del");                              // удалить директорию, файл
@@ -7,6 +7,7 @@ const postcss = require("gulp-postcss");                 // здесь нуже�
 const sass = require("gulp-sass");                       // трансляция SCSS -> CSS
 const mincss = require("gulp-clean-css");                // минификация CSS
 const minjs = require("gulp-uglify");                    // минификация JS
+const injectcss = require('gulp-inject-css');            // внедрение CSS внутрь html файла
 const rename = require("gulp-rename");                   // переименовать директорию, файл
 const runsequence = require("run-sequence");             // некоторые задачи надо выполнять последовательно
 const browsersync = require("browser-sync").create();    // сервер с поддержкой автообновления при изменении файлов
@@ -43,6 +44,7 @@ gulp.task("fonts", () => {
 
 gulp.task("html", () => {
   return gulp.src(paths.src.html)
+    .pipe(injectcss())
     .pipe(gulp.dest(paths.output.html));
 });
 
@@ -68,11 +70,11 @@ gulp.task("css", () => {
       browsers: ["last 2 versions", "not ie 10", "Firefox ESR"]
     })]))
     .pipe(rename(paths.output.minCssFilename))
-    .pipe(gulp.dest(paths.src.css))               // чтобы при разработке также был валидным путь до bundle в html
     .pipe(mincss({                                // минификация
       level: {1: {specialComments: false}}
     }))
-    .pipe(gulp.dest(paths.output.css))
+    .pipe(gulp.dest(paths.src.css))               // CSS готов для внедрения
+    // .pipe(gulp.dest(paths.output.css))
     .pipe(browsersync.stream());
 });
 
@@ -88,9 +90,9 @@ gulp.task("syncserver", () => {
 });
 
 gulp.task("build", () => {
-  runsequence("clean", ["fonts", "html", "img", "js", "css"]);
+  runsequence("clean", ["fonts", "img", "css", "js", "html"]);
 });
 
 gulp.task("start", () => {
-  runsequence("clean", ["fonts", "html", "img", "js", "css", "syncserver"]);
+  runsequence("clean", ["fonts", "img", "css", "js", "html", "syncserver"]);
 });

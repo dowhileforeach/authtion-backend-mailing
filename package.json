@@ -9,6 +9,7 @@
     "del": "^3.x.x",
     "gulp": "^3.x.x",
     "gulp-clean-css": "^3.x.x",
+    "gulp-inject-css": "^0.3.10",
     "gulp-postcss": "^7.x.x",
     "gulp-rename": "^1.x.x",
     "gulp-sass": "^4.x.x",
