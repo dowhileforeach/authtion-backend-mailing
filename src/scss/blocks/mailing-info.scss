@@ -1,0 +1,7 @@
+.mailing-info {
+  margin-top: 15px;
+  margin-bottom: 15px;
+
+  background-color: $color-white;
+  @include full-content-border;
+}

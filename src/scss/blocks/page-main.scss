@@ -1,0 +1,10 @@
+.page-main {
+  flex-shrink: 0; //important, so that the blocks are correctly extended in height
+  flex-grow: 1;
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+}
