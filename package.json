@@ -24,6 +24,7 @@
     "start": "gulp start"
   },
   "dependencies": {
+    "gulp-htmlmin": "^4.0.0",
     "stylelint-config-sass-guidelines": "^5.x.x"
   }
 }
