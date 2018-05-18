@@ -1,4 +1,4 @@
-This is Templates for mailing of [Authtion project](https://github.com/dowhileforeach/authtion)
+This is Email Templates for Email Alerts of [Authtion project](https://github.com/dowhileforeach/authtion#email-alerts)
 <br><br>
 To make build:
 <br>
