@@ -1,0 +1,36 @@
+.mailing-wrap {
+  padding: 10px;
+  background-color: $color-bg-body;
+
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+  @include fonts($font-size-x1, $font-height-normal, $font-weight-normal, normal, $color-mine-shaft);
+
+  a {
+    color: $color-denim-approx;
+    text-decoration: none;
+
+    border-bottom: 1px $color-denim-approx dotted;
+
+    transition: opacity 0.15s ease;
+
+    &:hover,
+    &:focus {
+      border-bottom-style: solid;
+      opacity: 0.5;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  h3 {
+    @include reset-margin-padding();
+    padding: 10px 0 7px;
+  }
+
+  p {
+    @include reset-margin-padding();
+    padding: 3px 0;
+  }
+}

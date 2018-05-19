@@ -1,6 +1,5 @@
 .mailing-info {
-  padding-right: 15px;
-  padding-left: 15px;
+  padding: 5px 15px 10px;
 
   @include fonts($font-size-x2, $font-height-normal, $font-weight-normal, normal, $color-mine-shaft);
 

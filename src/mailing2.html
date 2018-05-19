@@ -7,21 +7,25 @@
 </head>
 <body>
 
-<div class="mailing-info">
-  <h3>
-    Welcome!
-  </h3>
-  <p>
-    Your password:
-  </p>
-  <p class="mailing-info__important">
-    <b data-th-utext="${data}">
-      Insert password here
-    </b>
-  </p>
-</div>
+<div class="mailing-wrap">
 
-@@include('./template_footer.html')
+  <div class="mailing-info">
+    <h3>
+      Welcome!
+    </h3>
+    <p>
+      Your password:
+    </p>
+    <p class="mailing-info__important">
+      <b data-th-utext="${data}">
+        Insert password here
+      </b>
+    </p>
+  </div>
+
+  @@include('./template_footer.html')
+
+</div>
 
 </body>
 </html>
