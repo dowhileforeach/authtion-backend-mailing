@@ -2,42 +2,26 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Restore password</title>
   <link rel="stylesheet" href="css/bundle.min.css">
 </head>
 <body>
 
-<header class="page-header">
-</header>
+<div class="mailing-info">
+  <h3>
+    Restore password
+  </h3>
+  <p>
+    To restore your password please click here:
+  </p>
+  <p>
+    <a data-th-href="@{${data}}" data-th-utext="${data}" href="#" target="_blank">
+      Insert link here
+    </a>
+  </p>
+</div>
 
-<main class="page-main">
-
-  <section class="mailing-info  grid-container">
-    <div class="grid-row  grid-row--with-indent">
-      <h3>
-        Restore password
-      </h3>
-      <p>
-        To restore your password please click here:
-      </p>
-      <p>
-        <a href="#" target="_blank" data-th-href="@{${data}}" data-th-utext="${data}">Insert link here</a>
-      </p>
-    </div>
-  </section>
-
-</main>
-
-<footer class="page-footer">
-  <section class="grid-container">
-    <div class="grid-row  grid-row--with-indent">
-      <p>
-        <span>©&nbsp;<b>D</b>o|<b>W</b>hile|<b>F</b>or|<b>E</b>ach</span>, 2018
-      </p>
-    </div>
-  </section>
-</footer>
+@@include('./template_footer.html')
 
 </body>
 </html>

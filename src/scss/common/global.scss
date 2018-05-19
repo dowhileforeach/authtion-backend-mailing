@@ -1,16 +1,8 @@
-html,
-body {
-  width: 100%;
-  height: 100%;
-}
 
 body {
+  min-width: $grid-breakpoint-mobile;
+  padding: 10px;
   background-color: $color-bg-body;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
 }
 
 a {
@@ -30,23 +22,4 @@ a {
   &:active {
     opacity: 0.3;
   }
-}
-
-//
-// UTIL
-//
-.visually-hidden { // https://allyjs.io/tutorials/hiding-elements.html#2017-edition-of-visuallyhidden
-  position: absolute;
-
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-
-  white-space: nowrap;
-
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
 }

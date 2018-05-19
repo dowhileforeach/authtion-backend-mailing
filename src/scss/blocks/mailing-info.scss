@@ -1,7 +1,13 @@
 .mailing-info {
-  margin-top: 15px;
-  margin-bottom: 15px;
+  padding-right: 15px;
+  padding-left: 15px;
+
+  @include fonts($font-size-x2, $font-height-normal, $font-weight-normal, normal, $color-mine-shaft);
 
   background-color: $color-white;
   @include full-content-border;
+}
+
+.mailing-info__important {
+  color: $color-navy-blue;
 }

@@ -22,9 +22,8 @@
 }
 
 @mixin full-content-border {
-  border: 0;
   border-radius: $border-radius;
-  box-shadow: 0 1px 0 0 $color-alto, 0 0 0 1px $color-athens-gray;
+  border: 1px solid $color-alto;
 }
 
 //
